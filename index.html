@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #c8288f;
+            background-color: #00FF00;
             color: #000;
             margin: 0;
             padding: 20px;
@@ -21,18 +21,14 @@
             border: 3px solid #000;
             text-align: left;
         }
-        h1 {
-            color: #000000;
+        h1, h2, h3 {
+            color: #0000FF;
             text-decoration: underline;
-        }
-        h2, h3 {
-            color: #e24167;
-            text-decoration: underline;
+            cursor: pointer;
         }
         a {
-            color: #7abf64;
+            color: #FF0000;
             text-decoration: none;
-            font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
@@ -45,113 +41,138 @@
             border-top: 3px solid #000;
             padding-top: 10px;
         }
+        .collapsible {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <h1>Dhista Dwi Nur Ardiansyah</h1>
     <p>Yogyakarta, Indonesia | dhistadna@gmail.com</p>
-    
+    <h3><a href="https://drive.google.com/file/d/17SuVCuo4_nqvwHsYDJq99JBFR2SN1D5W/view?usp=drive_link" style="color: #0000FF;">My Resume</a></h3>
     <div class="content">
         <div class="section">
-            <h2>About Me</h2>
-            <p>Dynamic recent Informatics Engineering Education graduate with a robust background in backend and software development. Experienced in software and AI engineering, and application development. Completed extensive training as a Backend Developer and honed skills through various projects, demonstrating a strong commitment to continuous learning and excellence in technology.</p>
-            <a href="https://drive.google.com/file/d/17SuVCuo4_nqvwHsYDJq99JBFR2SN1D5W/view?usp=drive_link"><h3>My Resume</h3></a>
+            <h2 onclick="toggleVisibility('about')">About Me</h2>
+            <p id="about">Dynamic recent Informatics Engineering Education graduate with a robust background in backend and software development. Experienced in software and AI engineering, and application development. Completed extensive training as a Backend Developer and honed skills through various projects, demonstrating a strong commitment to continuous learning and excellence in technology.</p>
         </div>
 
         <div class="section">
-            <h2>Education</h2>
-            <p>Bachelor’s degree in Bachelor Informatic Education Engineering</p>
-            <p>Universitas Negeri Yogyakarta, Aug 2019 – Apr 2024</p>
-            <p>GPA: 3.71/4.0</p>
-            <ul>
-                <li>Most Innovative Game at IGSI Game Jam</li>
-                <li>Teaching Assistant at the Department of Electronic and Informatics Engineering Education</li>
-                <li>Gold Medal at the 2021 Lomba Inovasi Digital Mahasiswa (LIDM) for developing the AQG tool for educators</li>
-                <li>Publication: A Comparison of OpenNMT Sequence Model for Indonesian Automatic Question Generation, <a href="https://journal.uny.ac.id/index.php/elinvo/article/view/56491">ELINVO</a></li>
-                <li><a href="https://drive.google.com/file/d/1tH3Dnm68miY47oFokZ4JE-Akwg_2wzLd/view?usp=sharing">Presenter at Guest Lecturing for Student Final Project</a></li>
-            </ul>
+            <h2 onclick="toggleVisibility('education')">Education</h2>
+            <div id="education" class="collapsible">
+                <p>Bachelor’s degree in Bachelor Informatic Education Engineering</p>
+                <p>Universitas Negeri Yogyakarta, Aug 2019 – Apr 2024</p>
+                <p>GPA: 3.71/4.0</p>
+                <ul>
+                    <li>Most Innovative Game at IGSI Game Jam</li>
+                    <li>Teaching Assistant at the Department of Electronic and Informatics Engineering Education</li>
+                    <li>Gold Medal at the 2021 Lomba Inovasi Digital Mahasiswa (LIDM) for developing the AQG tool for educators</li>
+                    <li>Publication: A Comparison of OpenNMT Sequence Model for Indonesian Automatic Question Generation, <a href="https://journal.uny.ac.id/index.php/elinvo/article/view/56491">ELINVO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1tH3Dnm68miY47oFokZ4JE-Akwg_2wzLd/view?usp=sharing">Presenter at Guest Lecturing for Student Final Project</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Professional Experiences</h2>
-            <p><strong>Software Engineer (Freelance, Remote)</strong> - PT. ARKABYTE Teknologi Indonesia, Dec 2023 – Jul 2024</p>
-            <ul>
-                <li>Developed and maintained web applications using Laravel and Node.js, leading to a 30% improvement in user experience.</li>
-                <li>Designed and implemented RESTful APIs to facilitate seamless integration between frontend and backend systems, enhancing application efficiency and scalability.</li>
-            </ul>
-            <p><strong>Software Engineer (Freelance)</strong> - PT. Divistant Teknologi Indonesia, Jul 2021 – Dec 2021</p>
-            <ul>
-                <li>Developed and maintained Laravel-based web applications, resulting in a 25% increase in system efficiency and performance optimization.</li>
-                <li>Collaborated with design, development, and QA teams to deliver high-quality web solutions, reducing project delivery time by 30%.</li>
-                <li>Key role in a project recognized for excellence in user experience, resulting in a 50% increase in user engagement and retention.</li>
-            </ul>
-            <p><strong>Startup Campus</strong> - Achmad Zaky Foundation Aug 2021 – Dec 2021</p>
-            <ul>
-                <li>Founded and operated Medichain, showcasing strong entrepreneurial skills and leadership capabilities</li>
-                <li>Led the creation of the Minimum Viable Product (MVP) for Medichain’s first platform, integrating Electronic Medical Records (EMR) powered by private blockchain technology.</li>
-                <li>Led the team to win the Intern of the Month Award for exceptional performance and consistent results.</li>
-            </ul>
-            <p><a href="https://drive.google.com/file/d/1eIhJI-Re4Wi2lRtjQFMy6Ut8JVcbYLVx/view?usp=drive_link">Certifice</a></p>
-            <p><a href="https://www.figma.com/proto/SxL1OYlE4lJ1XDNA1sD1wc/MEDICHAIN-GEMASTIK-(Copy)?t=SMnK3Qv2aYPwLWIo-1">Pitch Deck</a></p>
+            <h2 onclick="toggleVisibility('professional')">Professional Experiences</h2>
+            <div id="professional" class="collapsible">
+                <p><strong>Software Engineer (Freelance, Remote)</strong> - PT. ARKABYTE Teknologi Indonesia, Dec 2023 – Jul 2024</p>
+                <ul>
+                    <li>Developed and maintained web applications using Laravel and Node.js, leading to a 30% improvement in user experience.</li>
+                    <li>Designed and implemented RESTful APIs to facilitate seamless integration between frontend and backend systems, enhancing application efficiency and scalability.</li>
+                </ul>
+                <p><strong>Software Engineer (Freelance)</strong> - PT. Divistant Teknologi Indonesia, Jul 2021 – Dec 2021</p>
+                <ul>
+                    <li>Developed and maintained Laravel-based web applications, resulting in a 25% increase in system efficiency and performance optimization.</li>
+                    <li>Collaborated with design, development, and QA teams to deliver high-quality web solutions, reducing project delivery time by 30%.</li>
+                    <li>Key role in a project recognized for excellence in user experience, resulting in a 50% increase in user engagement and retention.</li>
+                </ul>
+                <p><strong>Startup Campus</strong> - Achmad Zaky Foundation Aug 2021 – Dec 2021</p>
+                <ul>
+                    <li>Founded and operated Medichain, showcasing strong entrepreneurial skills and leadership capabilities</li>
+                    <li>Led the creation of the Minimum Viable Product (MVP) for Medichain’s first platform, integrating Electronic Medical Records (EMR) powered by private blockchain technology.</li>
+                    <li>Led the team to win the Intern of the Month Award for exceptional performance and consistent results.</li>
+                </ul>
+                <p><a href="https://drive.google.com/file/d/1eIhJI-Re4Wi2lRtjQFMy6Ut8JVcbYLVx/view?usp=drive_link">Certificate</a></p>
+                <p><a href="https://www.figma.com/proto/SxL1OYlE4lJ1XDNA1sD1wc/MEDICHAIN-GEMASTIK-(Copy)?t=SMnK3Qv2aYPwLWIo-1">Pitch Deck</a></p>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Projects</h2>
-        
-            <div class="project">
-                <h3>Open Music API</h3>
-                <p>Open Music API is a comprehensive backend project developed as part of the Dicoding course. This project is implemented using Node.js with the Hapi.js framework and is connected to a PostgreSQL database. The API is designed to manage music-related data and provides various functionalities to handle songs and playlists.</p>
-                <a href="https://github.com/gnotnek/OpenMusic-API-v3">Repository</a>
-            </div>
+            <h2 onclick="toggleVisibility('projects')">Projects</h2>
+            <div id="projects" class="collapsible">
+                <div class="project">
+                    <h3>Open Music API</h3>
+                    <p>Open Music API is a comprehensive backend project developed as part of the Dicoding course. This project is implemented using Node.js with the Hapi.js framework and is connected to a PostgreSQL database. The API is designed to manage music-related data and provides various functionalities to handle songs and playlists.</p>
+                    <a href="https://github.com/gnotnek/OpenMusic-API-v3">Repository</a>
+                </div>
 
-            <div class="project">
-                <h3>Note API</h3>
-                <p>Note API is a robust backend project developed using Node.js and the Hapi.js framework, connected to a PostgreSQL database. This project is designed to manage note-taking functionalities, providing a secure and efficient way to handle user-generated notes.</p>
-                <a href="https://github.com/gnotnek/notes-app-back-end">Repository</a>
-            </div>
+                <div class="project">
+                    <h3>Note API</h3>
+                    <p>Note API is a robust backend project developed using Node.js and the Hapi.js framework, connected to a PostgreSQL database. This project is designed to manage note-taking functionalities, providing a secure and efficient way to handle user-generated notes.</p>
+                    <a href="https://github.com/gnotnek/notes-app-back-end">Repository</a>
+                </div>
 
-            <div class="project">
-                <h3>AQG Model</h3>
-                <p>The Automatic Question Generator (AQG) is an advanced NLP system that automatically generates contextually relevant questions from text inputs. It streamlines question creation for educators, trainers, and content creators by leveraging machine learning techniques to analyze text and formulate questions accurately and efficiently.</p>
-                <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
-            </div>
+                <div class="project">
+                    <h3>AQG Model</h3>
+                    <p>The Automatic Question Generator (AQG) is an advanced NLP system that automatically generates contextually relevant questions from text inputs. It streamlines question creation for educators, trainers, and content creators by leveraging machine learning techniques to analyze text and formulate questions accurately and efficiently.</p>
+                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
+                </div>
 
-            <div class="project">
-                <h3>AQG Back End</h3>
-                <p>AQG Back End is a backend service designed to support an NLP-based Automatic Question Generator (AQG) model. This service is implemented using Python and the Flask framework, and it is deployed using Docker and Kubernetes on Google Cloud Platform (GCP). The AQG Back End processes text inputs and generates relevant questions automatically, leveraging advanced natural language processing techniques.</p>
-                <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
-            </div>
+                <div class="project">
+                    <h3>AQG Back End</h3>
+                    <p>AQG Back End is a backend service designed to support an NLP-based Automatic Question Generator (AQG) model. This service is implemented using Python and the Flask framework, and it is deployed using Docker and Kubernetes on Google Cloud Platform (GCP). The AQG Back End processes text inputs and generates relevant questions automatically, leveraging advanced natural language processing techniques.</p>
+                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
+                </div>
 
-            <div class="project">
-                <h3>Inventory Application</h3>
-                <p>Aplikasi Inventaris is an inventory management application developed to track and manage the assets of the youth organization of RT 34. This application is built using PHP with the Laravel framework and utilizes MySQL as the database. The primary goal of this application is to ensure that the organization's assets are properly tracked to prevent damage or loss.</p>
-                <a href="https://github.com/gnotnek/inventaris-app-34">Repository</a>
-            </div>
+                <div class="project">
+                    <h3>Inventory Application</h3>
+                    <p>Aplikasi Inventaris is an inventory management application developed to track and manage the assets of the youth organization of RT 34. This application is built using PHP with the Laravel framework and utilizes MySQL as the database. The primary goal of this application is to ensure that the organization's assets are properly tracked to prevent damage or loss.</p>
+                    <a href="https://github.com/gnotnek/inventaris-app-34">Repository</a>
+                </div>
 
-            <div class="project">
-                <h3>Kreweng Race</h3>
-                <p>Kreweng Race is a one-of-a-kind racing game built with the Unity game engine. The game offers smooth gameplay and stunning visuals, and can be played directly in your web browser thanks to its HTML5 conversion.</p>
-                <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Play Now</a>
-            </div>
+                <div class="project">
+                    <h3>Kreweng Race</h3>
+                    <p>Kreweng Race is a one-of-a-kind racing game built with the Unity game engine. The game offers smooth gameplay and stunning visuals, and can be played directly in your web browser thanks to its HTML5 conversion.</p>
+                    <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Play Now</a>
+                </div>
 
-            <div class="project">
-                <h3>Nge_Lag</h3>
-                <p>Nge_Lag is a unique action game that tests your timing and strategic thinking. Built with the Unity game engine, it offers a visually striking world and is playable directly on your Linux or Windows machine.</p>
-                <a href="https://danangwijaya750.itch.io/ngelag">Play Now</a>
-            </div>
+                <div class="project">
+                    <h3>Nge_Lag</h3>
+                    <p>Nge_Lag is an Android-based 2D game developed using Unity. This game provides an immersive gaming experience and showcases the developer's skills in game development for mobile platforms.</p>
+                    <a href="https://drive.google.com/file/d/1t5kIbOF3cflXk9EFQHidkvFIRoE7YZy8/view?usp=sharing">Download</a>
+                </div>
 
-            <div class="project">
-                <h3>Medichain</h3>
-                <p>Medichain is a revolutionary platform that integrates Electronic Medical Records (EMR) with blockchain technology to provide secure and efficient management of medical records. The platform ensures data integrity, security, and privacy while allowing healthcare providers to access and share medical information seamlessly.</p>
-                <a href="https://www.figma.com/proto/SxL1OYlE4lJ1XDNA1sD1wc/MEDICHAIN-GEMASTIK-(Copy)?t=SMnK3Qv2aYPwLWIo-1">Prototype</a>
+                <p>I'm passionate about innovation and building exceptional backend systems and software.  Fueled by this drive, I'm always up for a challenge, whether it's a freelance project or a full-time opportunity.  Want to see more of my work? Check out my projects on <a href="github.com/gnotnek">GitHub</a>, and let's chat about how I can help you achieve your goals!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleVisibility('contact')">Contact</h2>
+            <div id="contact" class="collapsible">
+                <p>I'm passionate about innovation and building exceptional backend systems and software. I'm always up for a challenge, whether it's a freelance project or a full-time opportunity</p>
+                <p><strong>Open to freelance gigs? Let's connect!</strong></p>
+                <ul>
+                    <li>Email: <a href="mailto:">dhistadna@gmail.com</a></li>
+                    <li>LinkedIn: <a href="www.linkedin.com/in/dhista-ardiansyah">Dhista Dwi Nur Ardiansyah</a></li>
+                    <li>GitHub: <a href="github.com/gnotnek">gnotnek</a></li>
+                </ul>
             </div>
         </div>
     </div>
 
     <footer>
-        <a href="mailto:dhistadna@gmail.com">dhistadna@gmail.com</a>
-        <a href="https://github.com/gnotnek">GitHub</a>
-        <a href="https://www.linkedin.com/in/dhista-ardiansyah-836816195/">LinkedIn</a>
+        <p>&copy; 2024 Dhista Ardiansyah. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
