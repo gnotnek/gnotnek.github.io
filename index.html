@@ -4,48 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhista Ardiansyah's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #00FF00;
-            color: #000;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #FFF;
-            padding: 20px;
-            border: 3px solid #000;
-            text-align: left;
-        }
-        h1, h2, h3 {
-            color: #0000FF;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        a {
-            color: #FF0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        footer {
-            margin-top: 20px;
-            border-top: 3px solid #000;
-            padding-top: 10px;
-        }
-        .collapsible {
-            display: none;
-        }
-    </style>
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <h1>Dhista Dwi Nur Ardiansyah</h1>
@@ -76,6 +37,10 @@
         <div class="section">
             <h2 onclick="toggleVisibility('professional')">Professional Experiences</h2>
             <div id="professional" class="collapsible">
+                <p><strong>Web Developer (Intern, Remote)</strong> - PT. Qiscus Tekno Indonesia, Sep 2024 – Now</p>
+                <ul>
+                    <li>Develop API and ChatBot according to clients need</li>
+                </ul>
                 <p><strong>Software Engineer (Freelance, Remote)</strong> - PT. ARKABYTE Teknologi Indonesia, Dec 2023 – Jul 2024</p>
                 <ul>
                     <li>Developed and maintained web applications using Laravel and Node.js, leading to a 30% improvement in user experience.</li>
@@ -98,51 +63,56 @@
         </div>
 
         <div class="section">
-            <h2 onclick="toggleVisibility('projects')">Projects</h2>
-            <div id="projects" class="collapsible">
-                <div class="project">
+            <h2>Projects</h2>
+            <div id="projects" class="collapsible projects-grid">
+                <div class="project-card">
+                    <img src="assets/img/open-music-api.jpg" alt="Open Music API" class="project-cover">
                     <h3>Open Music API</h3>
-                    <p>Open Music API is a comprehensive backend project developed as part of the Dicoding course. This project is implemented using Node.js with the Hapi.js framework and is connected to a PostgreSQL database. The API is designed to manage music-related data and provides various functionalities to handle songs and playlists.</p>
+                    <p>Open Music API is a comprehensive backend project developed as part of the Dicoding course. This project is implemented using Node.js with the Hapi.js framework and is connected to a PostgreSQL database.</p>
                     <a href="https://github.com/gnotnek/OpenMusic-API-v3">Repository</a>
                 </div>
-
-                <div class="project">
+        
+                <div class="project-card">
+                    <img src="assets/img/note-api.png" alt="Note API" class="project-cover">
                     <h3>Note API</h3>
-                    <p>Note API is a robust backend project developed using Node.js and the Hapi.js framework, connected to a PostgreSQL database. This project is designed to manage note-taking functionalities, providing a secure and efficient way to handle user-generated notes.</p>
+                    <p>Note API is a robust backend project developed using Node.js and the Hapi.js framework, connected to a PostgreSQL database. This project is designed to manage note-taking functionalities.</p>
                     <a href="https://github.com/gnotnek/notes-app-back-end">Repository</a>
                 </div>
-
-                <div class="project">
+        
+                <div class="project-card">
+                    <img src="assets/img/aqg-model.png" alt="AQG Model" class="project-cover">
                     <h3>AQG Model</h3>
-                    <p>The Automatic Question Generator (AQG) is an advanced NLP system that automatically generates contextually relevant questions from text inputs. It streamlines question creation for educators, trainers, and content creators by leveraging machine learning techniques to analyze text and formulate questions accurately and efficiently.</p>
+                    <p>The Automatic Question Generator (AQG) is an advanced NLP system that generates contextually relevant questions from text inputs. It streamlines question creation for educators and content creators.</p>
                     <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
                 </div>
-
-                <div class="project">
-                    <h3>AQG Back End</h3>
-                    <p>AQG Back End is a backend service designed to support an NLP-based Automatic Question Generator (AQG) model. This service is implemented using Python and the Flask framework, and it is deployed using Docker and Kubernetes on Google Cloud Platform (GCP). The AQG Back End processes text inputs and generates relevant questions automatically, leveraging advanced natural language processing techniques.</p>
-                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
-                </div>
-
-                <div class="project">
+        
+                <div class="project-card">
+                    <img src="assets/img/storage-apps.png" alt="Inventory Application" class="project-cover">
                     <h3>Inventory Application</h3>
-                    <p>Aplikasi Inventaris is an inventory management application developed to track and manage the assets of the youth organization of RT 34. This application is built using PHP with the Laravel framework and utilizes MySQL as the database. The primary goal of this application is to ensure that the organization's assets are properly tracked to prevent damage or loss.</p>
+                    <p>Aplikasi Inventaris is an inventory management application developed to track and manage the assets of the youth organization of RT 34.</p>
                     <a href="https://github.com/gnotnek/inventaris-app-34">Repository</a>
                 </div>
-
-                <div class="project">
+                
+                <div class="project-card">
+                    <img src="assets/img/aqg-mlops.png" alt="AQG CC" class="project-cover">
+                    <h3>AQG Back End & Cloud</h3>
+                    <p>AQG Back End is a Python and Flask-based service for an NLP Automatic Question Generator (AQG). Deployed with Docker and Kubernetes on GCP, it processes text inputs to generate relevant questions.</p>
+                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="assets/img/krewengrace.png" alt="Kreweng Race" class="project-cover">
                     <h3>Kreweng Race</h3>
-                    <p>Kreweng Race is a one-of-a-kind racing game built with the Unity game engine. The game offers smooth gameplay and stunning visuals, and can be played directly in your web browser thanks to its HTML5 conversion.</p>
+                    <p>Kreweng Race is a one-of-a-kind racing game built with the Unity game engine. The game offers smooth gameplay and stunning visuals.</p>
                     <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Play Now</a>
                 </div>
 
-                <div class="project">
-                    <h3>Nge_Lag</h3>
-                    <p>Nge_Lag is an Android-based 2D game developed using Unity. This game provides an immersive gaming experience and showcases the developer's skills in game development for mobile platforms.</p>
-                    <a href="https://drive.google.com/file/d/1t5kIbOF3cflXk9EFQHidkvFIRoE7YZy8/view?usp=sharing">Download</a>
+                <div class="project-card">
+                    <img src="assets/img/medichain.png" alt="Medichain" class="project-cover">
+                    <h3>Medichain</h3>
+                    <p>Medichain is an Electronic medical record integration platform that makes it easier for doctors and patients to access health records with private blockchain technology.</p>
+                    <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Prototype</a>
                 </div>
-
-                <p>I'm passionate about innovation and building exceptional backend systems and software.  Fueled by this drive, I'm always up for a challenge, whether it's a freelance project or a full-time opportunity.  Want to see more of my work? Check out my projects on <a href="github.com/gnotnek">GitHub</a>, and let's chat about how I can help you achieve your goals!</p>
             </div>
         </div>
 
@@ -164,15 +134,6 @@
         <p>&copy; 2024 Dhista Ardiansyah. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleVisibility(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === 'none' || element.style.display === '') {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-        }
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
