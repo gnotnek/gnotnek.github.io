@@ -75,6 +75,33 @@ footer {
     border-radius: 10px;    /* Round edges of the scrollbar */
 }
 
+.experience-card {
+    border: 1px solid #CCCCCC; /* Light grey border */
+    padding: 20px;
+    background-color: #FFFFFF; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.experience-card h3 {
+    color: #333333; /* Dark grey text */
+    margin-top: 0;
+}
+
+.experience-card p {
+    color: #666666; /* Medium grey text */
+    margin: 5px 0;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+.experience-card ul li {
+    margin-bottom: 10px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .projects-grid {
