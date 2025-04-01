@@ -1,116 +1,185 @@
+/* 2000s Internet Explorer Themed CSS */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #F0F0F0; /* Light grey background */
-    color: #333333; /* Dark grey text */
+    font-family: "Times New Roman", Arial, serif;
+    background-color: #d4d0c8; /* Classic Windows gray */
+    color: #000000;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     text-align: center;
 }
+
 .content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #FFFFFF; /* White background */
-    padding: 20px;
-    border: 1px solid #CCCCCC; /* Light grey border */
-    text-align: left;
+    width: 760px; /* Fixed width for old monitors */
+    margin: 10px auto;
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    box-shadow: 2px 2px 5px #cccccc;
+    padding: 15px;
 }
-h1, h2, h3 {
-    color: #333333; /* Dark grey text */
-    text-decoration: underline;
-    cursor: pointer;
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: #003399; /* IE blue */
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #003399;
+    padding-bottom: 5px;
+    margin-top: 10px;
 }
+
+h2 {
+    font-family: Arial, sans-serif;
+    color: #003399; /* IE blue */
+    font-size: 18px;
+    background-color: #ece9d8; /* Classic Windows UI color */
+    padding: 4px;
+    border: 1px solid #aca899; /* Classic Windows border */
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    color: #000080; /* Navy blue */
+    font-size: 16px;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 8px;
+}
+
 a {
-    color: #0066CC; /* Soft blue text */
-    text-decoration: none;
+    color: #0000ff; /* Classic blue links */
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #800080; /* Classic visited link */
+}
+
+a:hover {
+    color: #ff0000; /* Red on hover */
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+
+th {
+    background-color: #ece9d8; /* Classic Windows UI color */
+    border: 1px solid #aca899;
+    padding: 4px;
+    text-align: left;
     font-weight: bold;
 }
-a:hover {
-    text-decoration: underline;
+
+td {
+    border: 1px solid #aca899;
+    padding: 4px;
+    vertical-align: top;
 }
+
 .section {
     margin-bottom: 20px;
-}
-footer {
-    margin-top: 20px;
-    border-top: 1px solid #CCCCCC; /* Light grey border */
-    padding-top: 10px;
-}
-.collapsible {
-    display: none;
-}
-
-/* Style for the projects grid layout */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Now 3 cards per row */
-    grid-gap: 20px;
-    max-height: 600px; /* Adjust this height as per your preference */
-    overflow-y: auto;  /* Allows vertical scrolling */
-    padding: 10px;
-}
-
-.project-card {
-    border: 1px solid #CCCCCC; /* Light grey border */
-    padding: 20px;
-    background-color: #FFFFFF; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border-radius: 10px;
-}
-
-.project-cover {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #CCCCCC; /* Light grey border */
-    margin-bottom: 10px;
-}
-
-.projects-grid::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-}
-
-.projects-grid::-webkit-scrollbar-thumb {
-    background-color: #CCCCCC; /* Light grey scrollbar */
-    border-radius: 10px;    /* Round edges of the scrollbar */
+    text-align: left;
+    clear: both;
 }
 
 .experience-card {
-    border: 1px solid #CCCCCC; /* Light grey border */
-    padding: 20px;
-    background-color: #FFFFFF; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border: 1px solid #aca899;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
 }
 
-.experience-card h3 {
-    color: #333333; /* Dark grey text */
-    margin-top: 0;
+/* Classic buttons styling */
+button {
+    background-color: #ece9d8;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 2px 8px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 }
 
-.experience-card p {
-    color: #666666; /* Medium grey text */
-    margin: 5px 0;
+/* Windows scrollbar styling */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
 }
 
-.experience-card ul {
-    padding-left: 20px;
+::-webkit-scrollbar-track {
+    background-color: #d4d0c8;
 }
 
-.experience-card ul li {
-    margin-bottom: 10px;
+::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border: 1px outset #ffffff;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 cards per row on medium screens */
-    }
+::-webkit-scrollbar-button {
+    background-color: #d4d0c8;
+    border: 1px outset #ffffff;
+    height: 16px;
+    width: 16px;
 }
 
-@media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Switch to 1 card per row on small screens */
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #c0c0c0;
+    padding-top: 10px;
+    font-size: 11px;
+    color: #666666;
+    text-align: center;
+}
+
+/* IE toolbar style */
+.ie-toolbar {
+    background-color: #d4d0c8;
+    border-bottom: 1px solid #808080;
+    padding: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* IE status bar style */
+.ie-statusbar {
+    background-color: #d4d0c8;
+    border-top: 1px solid #808080;
+    padding: 2px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* Profile info styling */
+.profile-info {
+    margin-bottom: 15px;
+}
+
+/* Lists styling */
+ul {
+    list-style-type: square;
+    margin: 8px 0;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustment that maintains the fixed width look */
+@media (max-width: 780px) {
+    .content {
+        width: 95%;
     }
 }

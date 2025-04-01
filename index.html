@@ -1,159 +1,730 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhista Ardiansyah's Portfolio</title>
-    
-    <!-- custom css -->
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-    <strong><h1>Dhista Dwi Nur Ardiansyah</h1></strong>
-    <strong><p>Yogyakarta, Indonesia | dhistadna@gmail.com</p></strong>
-    <h3><a href="https://drive.google.com/file/d/17SuVCuo4_nqvwHsYDJq99JBFR2SN1D5W/view?usp=drive_link" style="color: #0000FF;">My Resume</a></h3>
-    <div class="content">
-        <div class="section">
-            <h2>About Me</h2>
-            <p id="about">Dynamic recent Informatics Engineering Education graduate with a robust background in backend and software development. Experienced in software and AI engineering, and application development. Completed extensive training as a Backend Developer and honed skills through various projects, demonstrating a strong commitment to continuous learning and excellence in technology.</p>
-        </div>
+<!doctype html>
+<html>
+    <head>
+        <title>Dhista Dwi Nur Ardiansyah - Portfolio</title>
+        <style>
+            body {
+                font-family: "Times New Roman", Arial, serif;
+                background-color: #d4d0c8; /* Classic Windows gray */
+                color: #000000;
+                margin: 0;
+                padding: 0;
+            }
 
-        <div class="section">
-            <h2 onclick="toggleVisibility('education')">Education</h2>
-            <div id="education" class="collapsible">
-                <p>Bachelor’s degree in Bachelor Informatic Education Engineering</p>
-                <p>Universitas Negeri Yogyakarta, Aug 2019 – Apr 2024</p>
-                <p>GPA: 3.71/4.0</p>
-                <ul>
-                    <li>Most Innovative Game at IGSI Game Jam</li>
-                    <li>Teaching Assistant at the Department of Electronic and Informatics Engineering Education</li>
-                    <li>Gold Medal at the 2021 Lomba Inovasi Digital Mahasiswa (LIDM) for developing the AQG tool for educators</li>
-                    <li>Publication: A Comparison of OpenNMT Sequence Model for Indonesian Automatic Question Generation, <a href="https://journal.uny.ac.id/index.php/elinvo/article/view/56491">ELINVO</a></li>
-                    <li><a href="https://drive.google.com/file/d/1tH3Dnm68miY47oFokZ4JE-Akwg_2wzLd/view?usp=sharing">Presenter at Guest Lecturing for Student Final Project</a></li>
-                </ul>
+            .ie-window {
+                width: 800px;
+                margin: 20px auto;
+                border: 2px solid #800000;
+                box-shadow: 2px 2px 5px #999999;
+            }
+
+            .ie-titlebar {
+                background: linear-gradient(to right, #0a246a, #a6caf0);
+                color: #ffffff;
+                padding: 2px 0 3px 4px;
+                font-family: "Tahoma", sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+            }
+
+            .ie-titlebar-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+            }
+
+            .ie-titlebar-buttons {
+                margin-left: auto;
+                display: flex;
+            }
+
+            .ie-button {
+                width: 18px;
+                height: 18px;
+                background-color: #d4d0c8;
+                border: 1px solid #ffffff;
+                border-right-color: #404040;
+                border-bottom-color: #404040;
+                margin-left: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Tahoma", sans-serif;
+                font-size: 9px;
+                color: #000000;
+            }
+
+            .ie-toolbar {
+                background-color: #d4d0c8;
+                border-bottom: 1px solid #808080;
+                padding: 3px;
+                font-family: "Tahoma", sans-serif;
+                font-size: 11px;
+                display: flex;
+            }
+
+            .ie-addressbar {
+                background-color: #ffffff;
+                border: 1px inset #808080;
+                flex-grow: 1;
+                height: 22px;
+                padding: 0 4px;
+                display: flex;
+                align-items: center;
+                font-family: "Tahoma", sans-serif;
+                font-size: 11px;
+                color: #000000;
+                margin: 0 4px;
+            }
+
+            .ie-toolbar-button {
+                padding: 2px 4px;
+                margin: 0 2px;
+                border: 1px solid #d4d0c8;
+                background-color: #d4d0c8;
+                font-family: "Tahoma", sans-serif;
+                font-size: 11px;
+            }
+
+            .ie-toolbar-button:hover {
+                border: 1px solid #ffffff;
+                border-right-color: #808080;
+                border-bottom-color: #808080;
+            }
+
+            .content {
+                background-color: #ffffff;
+                padding: 15px;
+                height: 500px;
+                overflow-y: auto;
+                font-size: 12px;
+            }
+
+            .ie-statusbar {
+                background-color: #d4d0c8;
+                border-top: 1px solid #808080;
+                padding: 2px 5px;
+                font-family: "Tahoma", sans-serif;
+                font-size: 11px;
+                display: flex;
+                align-items: center;
+            }
+
+            h1 {
+                font-family: Arial, sans-serif;
+                color: #003399; /* IE blue */
+                font-size: 20px;
+                font-weight: bold;
+                border-bottom: 1px solid #c0c0c0;
+                padding-bottom: 5px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-family: Arial, sans-serif;
+                color: #003399; /* IE blue */
+                font-size: 16px;
+                background-color: #ece9d8; /* Classic Windows UI color */
+                padding: 4px;
+                border: 1px solid #aca899; /* Classic Windows border */
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                font-family: Arial, sans-serif;
+                color: #000080; /* Navy blue */
+                font-size: 14px;
+                border-bottom: 1px solid #c0c0c0;
+                margin-bottom: 8px;
+                margin-top: 15px;
+            }
+
+            a {
+                color: #0000ff; /* Classic blue links */
+                text-decoration: underline;
+            }
+
+            a:visited {
+                color: #800080; /* Classic visited link */
+            }
+
+            a:hover {
+                color: #ff0000; /* Red on hover */
+            }
+
+            p {
+                margin: 8px 0;
+                line-height: 1.4;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .experience-card {
+                border: 1px solid #aca899;
+                padding: 10px;
+                margin-bottom: 15px;
+                background-color: #ffffff;
+            }
+
+            ul {
+                list-style-type: square;
+                margin: 8px 0;
+                padding-left: 25px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            th {
+                background-color: #ece9d8; /* Classic Windows UI color */
+                border: 1px solid #aca899;
+                padding: 4px;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            td {
+                border: 1px solid #aca899;
+                padding: 4px;
+                vertical-align: top;
+            }
+
+            .new-tag {
+                background-color: #ffff00;
+                color: #ff0000;
+                font-size: 10px;
+                padding: 1px 3px;
+                font-weight: bold;
+                display: inline-block;
+                margin-left: 5px;
+                vertical-align: middle;
+            }
+
+            /* Windows scrollbar styling */
+            .content::-webkit-scrollbar {
+                width: 16px;
+                height: 16px;
+            }
+
+            .content::-webkit-scrollbar-track {
+                background-color: #d4d0c8;
+            }
+
+            .content::-webkit-scrollbar-thumb {
+                background-color: #c0c0c0;
+                border: 1px outset #ffffff;
+            }
+
+            .content::-webkit-scrollbar-button {
+                background-color: #d4d0c8;
+                border: 1px outset #ffffff;
+                height: 16px;
+                width: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ie-window">
+            <div class="ie-titlebar">
+                <img
+                    class="ie-titlebar-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Internet_Explorer_logo_old.png"
+                />
+                Dhista Dwi Nur Ardiansyah - Microsoft Internet Explorer
+                <div class="ie-titlebar-buttons">
+                    <div class="ie-button">_</div>
+                    <div class="ie-button">□</div>
+                    <div class="ie-button">X</div>
+                </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2 onclick="toggleVisibility('professional')">Career Milestones</h2>
-            <div id="professional" class="collapsible">
-                <div class="experience-card">
-                    <h3>Web Developer (Intern, Remote)</h3>
-                    <p>PT. Qiscus Tekno Indonesia, Sep 2024 – Now</p>
-                    <ul>
-                        <li>Develop API and ChatBot according to clients needs</li>
-                    </ul>
+            <div class="ie-toolbar">
+                <span class="ie-toolbar-button">Back</span>
+                <span class="ie-toolbar-button">Forward</span>
+                <span class="ie-toolbar-button">Stop</span>
+                <span class="ie-toolbar-button">Refresh</span>
+                <span class="ie-toolbar-button">Home</span>
+                <div class="ie-addressbar">
+                    http://www.dhista-portfolio.com/index.html
                 </div>
-                <div class="experience-card">
-                    <h3>Software Engineer (Freelance, Remote)</h3>
-                    <p>PT. ARKABYTE Teknologi Indonesia, Dec 2023 – Mar 2024</p>
-                    <ul>
-                        <li>Developed and maintained web applications using Laravel and Node.js, leading to a 30% improvement in user experience.</li>
-                        <li>Designed and implemented RESTful APIs to facilitate seamless integration between frontend and backend systems, enhancing application efficiency and scalability.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Software Engineer (Freelance)</h3>
-                    <p>PT. Divistant Teknologi Indonesia, Jul 2021 – Dec 2021</p>
-                    <ul>
-                        <li>Developed and maintained Laravel-based web applications, resulting in a 25% increase in system efficiency and performance optimization.</li>
-                        <li>Collaborated with design, and development to deliver high-quality web solutions, reducing project delivery time by 30%.</li>
-                        <li>Key role in a project recognized for excellence in user experience, resulting in a 50% increase in user engagement and retention.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Startup Campus (mentorship, remote)</h3>
-                    <p>Achmad Zaky Foundation Aug 2021 – Dec 2021</p>
-                    <p><a href="https://drive.google.com/file/d/1eIhJI-Re4Wi2lRtjQFMy6Ut8JVcbYLVx/view?usp=drive_link">Certificate</a> || <a href="https://www.figma.com/proto/SxL1OYlE4lJ1XDNA1sD1wc/MEDICHAIN-GEMASTIK-(Copy)?t=SMnK3Qv2aYPwLWIo-1">Pitch Deck</a></p>
-                    <ul>
-                        <li>Founded and operated Medichain, showcasing strong entrepreneurial skills and leadership capabilities</li>
-                        <li>Led the creation of the Minimum Viable Product (MVP) for Medichain’s first platform, integrating Electronic Medical Records (EMR) powered by private blockchain technology.</li>
-                        <li>Led the team to win the Intern of the Month Award for exceptional performance and consistent results.</li>
-                    </ul>
-                </div>
+                <span class="ie-toolbar-button">Go</span>
             </div>
-        </div>
+            <div class="content">
+                <h1>Dhista Dwi Nur Ardiansyah</h1>
+                <p>
+                    <strong>Location:</strong> Yogyakarta, Indonesia<br />
+                    <strong>Email:</strong>
+                    <a href="mailto:dhistadna@gmail.com">dhistadna@gmail.com</a
+                    ><br />
+                    <strong>Phone:</strong> +6281915400053<br />
+                    <strong>Profiles:</strong> <a href="#">GitHub</a> |
+                    <a href="#">LinkedIn</a>
+                </p>
+                <p>
+                    Backend Engineer with a strong foundation in building
+                    scalable, high-performance systems using Golang. Experienced
+                    in designing robust APIs, optimizing database architectures,
+                    and implementing CI/CD workflows. Passionate about software
+                    engineering, AI solutions, and cloud technologies, with
+                    hands-on experience from various projects in SaaS, AI-driven
+                    applications, and fintech. Always eager to learn, adapt, and
+                    contribute to impactful solutions.
+                </p>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <div id="projects" class="collapsible projects-grid">
-                <div class="project-card">
-                    <img src="assets/img/open-music-api.jpg" alt="Open Music API" class="project-cover">
-                    <h3>Open Music API</h3>
-                    <p>Open Music API is a comprehensive backend project developed as part of the Dicoding course. This project is implemented using Node.js with the Hapi.js framework and is connected to a PostgreSQL database.</p>
-                    <a href="https://github.com/gnotnek/OpenMusic-API-v3">Repository</a>
-                </div>
-        
-                <div class="project-card">
-                    <img src="assets/img/event-booking.png" alt="Event Booking" class="project-cover">
-                    <h3>Event Booking API</h3>
-                    <p>The Event Booking System is a web application developed using Golang, designed to streamline event reservations. Built with onion architecture, it ensures maintainability and scalability, catering to both organizers and attendees.
+                <h2>Education</h2>
+                <div class="experience-card">
+                    <h3>Universitas Negeri Yogyakarta</h3>
+                    <p>
+                        <strong
+                            >Bachelor's degree in Informatic Education
+                            Engineering</strong
+                        ><br />
+                        Aug 2019 – Apr 2024<br />
+                        GPA: 3.71/4,0 (155 credits)
                     </p>
-                    <a href="https://github.com/gnotnek/event-booking">Repository</a>
+                    <ul>
+                        <li>
+                            Received the award for the most innovative game at
+                            IGSI Game Jam.
+                        </li>
+                        <li>
+                            Served as a Teaching Assistant at the Department of
+                            Electronic and Informatics Engineering Education.
+                        </li>
+                        <li>
+                            Earned a gold medal at the 2021 Lomba Inovasi
+                            Digital Mahasiswa (LIDM) for developing the AQG
+                            (Automatic Question Generator) tool for educators.
+                        </li>
+                        <li>
+                            Presenter at Guest Lecturing for Student Final
+                            Project. <a href="#">Certificate</a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="project-card">
-                    <img src="assets/img/note-api.png" alt="Note API" class="project-cover">
-                    <h3>Note API</h3>
-                    <p>Note API is a robust backend project developed using Node.js and the Hapi.js framework, connected to a PostgreSQL database. This project is designed to manage note-taking functionalities.</p>
-                    <a href="https://github.com/gnotnek/notes-app-back-end">Repository</a>
-                </div>
-        
-                <div class="project-card">
-                    <img src="assets/img/aqg-model.png" alt="AQG Model" class="project-cover">
-                    <h3>AQG Model</h3>
-                    <p>The Automatic Question Generator (AQG) is an advanced NLP system that generates contextually relevant questions from text inputs. It streamlines question creation for educators and content creators.</p>
-                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
-                </div>
-        
-                <div class="project-card">
-                    <img src="assets/img/storage-apps.png" alt="Inventory Application" class="project-cover">
-                    <h3>Inventory Application</h3>
-                    <p>Aplikasi Inventaris is an inventory management application developed to track and manage the assets of the youth organization of RT 34.</p>
-                    <a href="https://github.com/gnotnek/inventaris-app-34">Repository</a>
-                </div>
-                
-                <div class="project-card">
-                    <img src="assets/img/aqg-mlops.png" alt="AQG CC" class="project-cover">
-                    <h3>AQG Back End & Cloud</h3>
-                    <p>AQG Back End is a Python and Flask-based service for an NLP Automatic Question Generator (AQG). Deployed with Docker and Kubernetes on GCP, it processes text inputs to generate relevant questions.</p>
-                    <a href="https://github.com/gnotnek/AQG-OMNT-BACKUP">Repository</a>
-                </div>
-        
-                <div class="project-card">
-                    <img src="assets/img/krewengrace.png" alt="Kreweng Race" class="project-cover">
-                    <h3>Kreweng Race</h3>
-                    <p>Kreweng Race is a one-of-a-kind racing game built with the Unity game engine. The game offers smooth gameplay and stunning visuals.</p>
-                    <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Play Now</a>
+                <h2>Professional Experiences</h2>
+                <div class="experience-card">
+                    <h3>
+                        PT. Nordspec Mandala Persada
+                        <span class="new-tag">NEW!</span>
+                    </h3>
+                    <p>
+                        <strong>Backend Engineer (Fulltime, On-site)</strong
+                        ><br />
+                        Dec 2024 – Now<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Developing and maintaining scalable backend services
+                            using Golang, ensuring high performance, security,
+                            and reliability.
+                        </li>
+                        <li>
+                            Designing structured ERD and optimizing database
+                            architecture to improve efficiency and data
+                            integrity across various applications.
+                        </li>
+                        <li>
+                            Building and documenting APIs using Postman and
+                            Swagger, enabling seamless integration and efficient
+                            communication between services.
+                        </li>
+                        <li>
+                            Implementing CI/CD pipelines with GitLab Runner,
+                            automating deployment processes, and collaborating
+                            with teams through GitLab for version control and
+                            streamlined development workflows.
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="project-card">
-                    <img src="assets/img/medichain.png" alt="Medichain" class="project-cover">
-                    <h3>Medichain</h3>
-                    <p>Medichain is an Electronic medical record integration platform that makes it easier for doctors and patients to access health records with private blockchain technology.</p>
-                    <a href="https://dhista-ardiansyah.itch.io/kreweng-race">Prototype</a>
+                <div class="experience-card">
+                    <h3>PT. Qiscus Tekno Indonesia</h3>
+                    <p>
+                        <strong>Web Developer (Internship, Hybrid)</strong
+                        ><br />
+                        Aug 2024 – Nov 2024<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Designed and implemented scalable backend services
+                            using Golang and Ruby on Rails, ensuring robust and
+                            efficient system performance.
+                        </li>
+                        <li>
+                            Developed and integrated chatbot solutions utilizing
+                            Dialogflow to enhance conversational AI
+                            capabilities.
+                        </li>
+                        <li>
+                            Collaborated with cross-functional teams to optimize
+                            backend processes and deliver seamless user
+                            experiences.
+                        </li>
+                        <li>
+                            Gained hands-on experience in building and
+                            maintaining backend infrastructure for real-time
+                            communication platforms.
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
 
-        <div class="section">
-            <h2 onclick="toggleVisibility('contact')">Contact</h2>
-            <div id="contact">
-                <p>I'm passionate about innovation and building exceptional backend systems and software. I'm always up for a challenge, whether it's a freelance project or a full-time opportunity</p>
-                <p><strong>Open to freelance gigs? Let's connect!</strong></p>
+                <div class="experience-card">
+                    <h3>PT. Arkabyte Teknologi Indonesia</h3>
+                    <p>
+                        <strong>Software Engineer (Freelance, Remote)</strong
+                        ><br />
+                        Dec 2023 – Feb 2024<br />
+                        Semarang, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Developed and maintained web applications using
+                            Laravel and Node.js, leading to a 30% improvement in
+                            user experience.
+                        </li>
+                        <li>
+                            Designed and implemented RESTful APIs to facilitate
+                            seamless integration between frontend and backend
+                            systems, enhancing application efficiency and
+                            scalability.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>PT. Divistant Teknologi Indonesia</h3>
+                    <p>
+                        <strong>Software Engineer (Freelance)</strong><br />
+                        Jul 2021 – Oct 2021<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Spearheaded the development and maintenance of a
+                            Laravel-based web application, increasing system
+                            efficiency and performance by 25%.
+                        </li>
+                        <li>
+                            Contributed to a project recognized for its
+                            exceptional user experience, boosting user
+                            engagement and retention by 50%.
+                        </li>
+                        <li>
+                            Worked with Unity to create innovative solutions,
+                            further expanding the company's range of software
+                            offerings.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Startup Campus by Achmad Zaky</h3>
+                    <p>
+                        <strong>Mentee</strong><br />
+                        Aug 2021 – Dec 2021<br />
+                        Jakarta, ID<br />
+                        <a href="#">Certificate</a> ||
+                        <a href="#">Pitch Deck</a>
+                    </p>
+                    <ul>
+                        <li>
+                            Founded and operated Medichain, showcasing strong
+                            entrepreneurial skills and leadership capabilities.
+                        </li>
+                        <li>
+                            Led the creation of the Minimum Viable Product (MVP)
+                            for Medichain's first platform, integrating
+                            Electronic Medical Records (EMR) powered by private
+                            blockchain technology.
+                        </li>
+                        <li>
+                            Led the team to win the Intern of the Month Award
+                            for exceptional performance and consistent results.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>PKM Center UNY</h3>
+                    <p>
+                        <strong>IT Staff (Data Team Leader)</strong><br />
+                        Jul 2020 – Jun 2022<br />
+                        Yogyakarta, ID<br />
+                        <a href="#">Certificate</a>
+                    </p>
+                    <ul>
+                        <li>
+                            Developed, maintained, and optimized the Student
+                            Research Information System using Laravel, improving
+                            system performance and usability for students and
+                            faculty.
+                        </li>
+                        <li>
+                            Enhanced database structure and application logic,
+                            ensuring efficient data management and seamless
+                            integration within the research system.
+                        </li>
+                        <li>
+                            Provided hands-on guidance and technical support to
+                            PKM Center users, facilitating smooth system
+                            navigation and troubleshooting technical issues.
+                        </li>
+                        <li>
+                            Implemented dynamic data visualizations, reducing
+                            decision-making time by 25% and leading to a 20%
+                            improvement in project evaluation efficiency.
+                        </li>
+                        <li>
+                            Reduced system downtime and technical issue
+                            resolution time by 40%, increasing overall user
+                            satisfaction and productivity.
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Organizational Experiences</h2>
+                <div class="experience-card">
+                    <h3>INFINITE UNY</h3>
+                    <p>
+                        <strong>Head of Competition</strong><br />
+                        Jan 2021-Apr 2024<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Directed annual competitions, consistently
+                            surpassing participation targets by 20%, enhancing
+                            visibility and recognition within the technology
+                            community.
+                        </li>
+                        <li>
+                            Enhanced administrative efficiency by 30% through
+                            process streamlining and team training initiatives.
+                        </li>
+                        <li>
+                            Achieved a 25% reduction in administrative errors
+                            through quality control measures and regular audits.
+                        </li>
+                        <li>
+                            Implemented a comprehensive achievement tracking
+                            system, resulting in a 30% decrease in errors and
+                            ensuring accurate documentation of members'
+                            accomplishments.
+                        </li>
+                        <li>
+                            Effectively transitioned competitions to virtual
+                            formats, sustaining student engagement and
+                            participation levels during the pandemic.
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Projects</h2>
+                <table>
+                    <tr>
+                        <th width="30%">Project Name</th>
+                        <th width="20%">Timeline</th>
+                        <th width="50%">Description</th>
+                    </tr>
+                    <tr>
+                        <td>Paylink <span class="new-tag">NEW!</span></td>
+                        <td>Jan 2025-present</td>
+                        <td>
+                            Developing the backend for Paylink, an e-wallet
+                            system built with Golang, PostgreSQL, and Stripe to
+                            facilitate seamless payroll transfers from Oltime
+                            Dashboard. Implemented wallet-to-wallet transfers,
+                            bank withdrawals, and OTP-based transaction
+                            verification via sms or email.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Oltime Dashboard</td>
+                        <td>Dec 2024</td>
+                        <td>
+                            Maintained and optimized the Oltime Dashboard, an
+                            all-in-one worker management and job-seeking
+                            platform. Worked with Laravel, MySQL, and R2 storage
+                            to enhance system stability and performance.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Notuline</td>
+                        <td>Dec 2024</td>
+                        <td>
+                            Developed the backend for Notuline, an AI-powered
+                            assistant for recording, noting, and summarizing
+                            meetings. Built using Golang (Fiber framework), with
+                            PostgreSQL as the database and Supabase for file
+                            storage, ensuring efficient data management and
+                            seamless user experience.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Road Damage Detection Using YOLO v8</td>
+                        <td>Oct 2024</td>
+                        <td>
+                            Developed an AI-driven system to detect road damages
+                            by fine-tuning the YOLO v8 model. Utilized datasets
+                            from the Indonesian Ministry of Public Works and
+                            Housing (PUPR) and the RoadDamageDetector repository
+                            to enhance model accuracy.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Custom Agent Allocation</td>
+                        <td>Aug 2024</td>
+                        <td>
+                            A backend service developed for Qiscus to
+                            efficiently distribute customers to agents while
+                            ensuring load balancing. Each agent has a
+                            configurable limit, adjustable through environment
+                            variables.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Automation Question Generator</td>
+                        <td>Dec 2023</td>
+                        <td>
+                            AQG Back End is a backend service designed to
+                            support an NLP-based Automatic Question Generator
+                            (AQG) model. This service is implemented using
+                            Python and the Flask framework, and it is deployed
+                            using Docker and Kubernetes on Google Cloud Platform
+                            (GCP).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Medichain</td>
+                        <td>Dec 2021</td>
+                        <td>
+                            Medichain is an Electronic medical record
+                            integration platform that makes it easier for
+                            doctors, patients, and hospitals to access health
+                            records with private blockchain technology.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nge-Lag: Attack with your past</td>
+                        <td>Apr 2021</td>
+                        <td>
+                            Ngelag is an innovative and strategic game where
+                            players must outsmart their enemies by using their
+                            past moves as a weapon. This unique gameplay
+                            mechanic challenges players to think ahead and
+                            strategically plan their actions.
+                        </td>
+                    </tr>
+                </table>
+
+                <h2>Certifications & Training</h2>
+                <table>
+                    <tr>
+                        <th width="70%">Certification</th>
+                        <th width="30%">Date</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Belajar Dasar
+                            AI
+                        </td>
+                        <td>Dec 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Belajar
+                            Membuat Aplikasi Web dengan React
+                        </td>
+                        <td>Nov 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Belajar
+                            Membuat Front-End Web untuk pemula
+                        </td>
+                        <td>Oct 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Belajar Dasar
+                            Pemrograman Web
+                        </td>
+                        <td>Sep 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Architecting
+                            on AWS by Dicoding
+                        </td>
+                        <td>Mar 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Fundamental
+                            Back End Applications by Dicoding
+                        </td>
+                        <td>Feb 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Build
+                            Beginner-Level Back End Applications by Dicoding
+                        </td>
+                        <td>Oct 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Cloud
+                            Practitioner Essentials by Dicoding
+                        </td>
+                        <td>Oct 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Indosat Ooredoo Digital Camp (IDCamp): Fundamental
+                            Javascript by Dicoding
+                        </td>
+                        <td>Oct 2023</td>
+                    </tr>
+                </table>
+
+                <h2>Achievements</h2>
                 <ul>
-                    <li>Email: <a href="mailto:">dhistadna@gmail.com</a></li>
-                    <li>LinkedIn: <a href="www.linkedin.com/in/dhista-ardiansyah">Dhista Dwi Nur Ardiansyah</a></li>
-                    <li>GitHub: <a href="github.com/gnotnek">gnotnek</a></li>
+                    <li>
+                        Gold medal winner at the 2021 Lomba Inovasi Digital
+                        Mahasiswa (LIDM) - Sep 2021
+                    </li>
+                    <li>
+                        Most Innovative Game (Nge-Lag Game) at Indigo Game
+                        Startup Incubation - Apr 2021
+                    </li>
+                </ul>
+
+                <h2>Publications</h2>
+                <ul>
+                    <li>
+                        A Comparison of OpenNMT Sequence Model for Indonesian
+                        Automatic Question Generation - Apr 2022
+                    </li>
                 </ul>
             </div>
+            <div class="ie-statusbar">Done Internet</div>
         </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Dhista Ardiansyah. All rights reserved.</p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-</body>
+    </body>
 </html>
