@@ -1,12 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>About Me - Dhista Dwi Nur Ardiansyah</title>
         <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/main.js" defer></script>
     </head>
     <body>
-        <div class="content">
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <main id="main-content" class="content">
             <h1>About Dhista Dwi Nur Ardiansyah</h1>
+
+            <div class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="assets/docs/cv-dhista%20ardiansyah.pdf">CV</a>
+            </div>
 
             <div class="profile-section">
                 <div class="profile-details">
@@ -17,8 +28,15 @@
                             >dhistadna@gmail.com</a
                         ><br />
                         <strong>Phone:</strong> +6281915400053<br />
-                        <strong>Profiles:</strong> <a href="#">GitHub</a> |
-                        <a href="#">LinkedIn</a>
+                        <strong>Profiles:</strong>
+                        <a href="https://github.com/gnotnek">GitHub</a> |
+                        <a href="http://www.linkedin.com/in/dhista-ardiansyah"
+                            >LinkedIn</a
+                        ><br />
+                        <strong>Latest CV:</strong>
+                        <a href="assets/docs/cv-dhista%20ardiansyah.pdf"
+                            >Download PDF</a
+                        >
                     </p>
 
                     <p class="bio">
@@ -34,6 +52,38 @@
                     </p>
                 </div>
             </div>
+
+            <h2>Technical Focus</h2>
+            <table>
+                <tr>
+                    <th width="30%">Area</th>
+                    <th width="70%">Tools & Experience</th>
+                </tr>
+                <tr>
+                    <td>Backend Engineering</td>
+                    <td>
+                        Golang, TypeScript, Express.js, Laravel, Node.js, Ruby
+                        on Rails, RESTful API design, clean architecture, and
+                        service documentation with Postman and Swagger.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data & Infrastructure</td>
+                    <td>
+                        PostgreSQL, MySQL, MongoDB, Redis, Supabase, Docker,
+                        Kubernetes, GitLab Runner, CI/CD workflows, and cloud
+                        storage integrations.
+                    </td>
+                </tr>
+                <tr>
+                    <td>AI & Product Systems</td>
+                    <td>
+                        Dialogflow chatbot integrations, OpenAI API usage,
+                        NLP-based question generation, computer vision with
+                        YOLO, and AI-assisted workflow automation.
+                    </td>
+                </tr>
+            </table>
 
             <h2>Education</h2>
             <div class="experience-card">
@@ -61,8 +111,16 @@
                         Question Generator) tool for educators.
                     </li>
                     <li>
+                        Participated in multiple academic research projects
+                        covering automatic question generation, usability
+                        testing, and computer vision.
+                    </li>
+                    <li>
                         Presenter at Guest Lecturing for Student Final Project.
-                        <a href="#">Certificate</a>
+                        <a
+                            href="https://drive.google.com/file/d/1tH3Dnm68miY47oFokZ4JE-Akwg_2wzLd/view?usp=sharing"
+                            >Certificate</a
+                        >
                     </li>
                 </ul>
             </div>
@@ -190,21 +248,36 @@
                     A Comparison of OpenNMT Sequence Model for Indonesian
                     Automatic Question Generation - Apr 2022
                 </li>
+                <li>
+                    Usability Testing Hybrid Method for Indonesian Automatic
+                    Question Generator - Jul 2025
+                </li>
+                <li>
+                    Optimizing YOLO Models for Enhanced Road Damage Detection: A
+                    Performance Comparison of YOLOv5 and YOLOv8 - Jan 2026
+                </li>
+                <li>
+                    IndoBERT for educational assessment: comparative analysis of
+                    transformer models in Indonesian question generation - Apr
+                    2026
+                </li>
             </ul>
 
             <div class="navigation-buttons">
                 <a href="index.html" class="button">Home</a>
                 <a href="portfolio.html" class="button">View My Portfolio</a>
             </div>
-        </div>
+        </main>
 
         <footer>
             <p>
-                Best viewed with Microsoft Internet Explorer 6.0 or higher at
-                800x600 resolution
+                Portfolio archive, selected work, and professional notes.
             </p>
-            <p>© 2025 Dhista Dwi Nur Ardiansyah. All rights reserved.</p>
-            <p>Last updated: April 2025</p>
+            <p>
+                © <span data-current-year>2026</span> Dhista Dwi Nur
+                Ardiansyah. All rights reserved.
+            </p>
+            <p>Last updated: May 2026</p>
         </footer>
     </body>
 </html>

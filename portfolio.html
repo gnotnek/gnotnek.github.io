@@ -1,15 +1,96 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Portfolio - Dhista Dwi Nur Ardiansyah</title>
         <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="assets/js/main.js" defer></script>
     </head>
     <body>
-        <div class="content">
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <main id="main-content" class="content">
             <h1>Professional Portfolio</h1>
+
+            <div class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html" aria-current="page">Portfolio</a>
+                <a href="assets/docs/cv-dhista%20ardiansyah.pdf">CV</a>
+            </div>
 
             <div class="section">
                 <h2>Professional Experiences</h2>
+
+                <div class="experience-card">
+                    <h3>Universitas Nahdlatul Ulama Yogyakarta</h3>
+                    <p>
+                        <strong>Software Engineer (Contract, Hybrid)</strong
+                        ><br />
+                        Apr 2024 – Now<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Designed and developed multiple backend systems to
+                            support university operations, focusing on
+                            scalability, reliability, and maintainability.
+                        </li>
+                        <li>
+                            Architected a real-time voucher reimbursement system
+                            using TypeScript, Express.js, and MongoDB,
+                            including multi-session handling and
+                            WebSocket-based live updates.
+                        </li>
+                        <li>
+                            Engineered a budgeting system for staff, ensuring
+                            structured financial tracking and efficient
+                            resource allocation.
+                        </li>
+                        <li>
+                            Built and secured internal APIs for staff data
+                            services, implementing API key-based authentication
+                            and access control for safe inter-service
+                            communication.
+                        </li>
+                        <li>
+                            Designed auditing and logging mechanisms across
+                            systems to ensure data integrity, traceability, and
+                            compliance.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>PT. Kanca Sukses Bersama</h3>
+                    <p>
+                        <strong>Software Engineer (Freelance, Hybrid)</strong
+                        ><br />
+                        Jun 2025 – Aug 2025<br />
+                        Yogyakarta, ID
+                    </p>
+                    <ul>
+                        <li>
+                            Developed a Knowledge Management System using
+                            Golang for the backend, Next.js for the frontend,
+                            and PostgreSQL as the primary database.
+                        </li>
+                        <li>
+                            Built modules to manage customer complaints, product
+                            knowledge, and customer data for improved
+                            operational efficiency.
+                        </li>
+                        <li>
+                            Designed a scalable and secure backend architecture
+                            to handle high volumes of customer-related data.
+                        </li>
+                        <li>
+                            Implemented intuitive frontend interfaces to
+                            streamline data access and complaint resolution for
+                            internal users.
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="experience-card">
                     <h3>PT. Nordspec Mandala Persada</h3>
@@ -131,8 +212,15 @@
                         <strong>Mentee</strong><br />
                         Aug 2021 – Dec 2021<br />
                         Jakarta, ID<br />
-                        <a href="#">Certificate</a> ||
-                        <a href="#">Pitch Deck</a>
+                        <a
+                            href="https://drive.google.com/file/d/1eIhJI-Re4Wi2lRtjQFMy6Ut8JVcbYLVx/view?usp=drive_link"
+                            >Certificate</a
+                        >
+                        ||
+                        <a
+                            href="https://www.figma.com/proto/SxL1OYlE4lJ1XDNA1sD1wc/MEDICHAIN-GEMASTIK-(Copy)?t=SMnK3Qv2aYPwLWIo-1"
+                            >Pitch Deck</a
+                        >
                     </p>
                     <ul>
                         <li>
@@ -158,7 +246,10 @@
                         <strong>IT Staff (Data Team Leader)</strong><br />
                         Jul 2020 – Jun 2022<br />
                         Yogyakarta, ID<br />
-                        <a href="#">Certificate</a>
+                        <a
+                            href="https://drive.google.com/file/d/1BSYm51rGd4HpWZYwfUYsjFnyGJre20Sb/view?usp=drive_link"
+                            >Certificate</a
+                        >
                     </p>
                     <ul>
                         <li>
@@ -196,7 +287,189 @@
 
                 <div class="project-card">
                     <h3>
-                        PIC Service on Oltime <span class="new-tag">NEW!</span>
+                        UNUY Wiki <span class="new-tag">NEW!</span>
+                    </h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Mar 2026</p>
+                        <p>
+                            <strong>Tech Stack:</strong> Vue.js, Golang, Fiber,
+                            GitLab, Gemini, RAG
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Full-stack Internal
+                            Wiki, AI-assisted Knowledge Base
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Developed a full-stack
+                            internal wiki application that centralizes
+                            documentation for UNUY projects stored in GitLab.
+                            Built the frontend with Vue.js and the backend with
+                            Golang and Fiber, making it easier for IT and
+                            product teams to manage, update, and access project
+                            documentation in one place. Integrated Gemini as the
+                            LLM model with RAG capabilities so the AI chat
+                            feature can understand project documentation and
+                            help users explore technical or business context
+                            more efficiently.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>
+                                    Centralized documentation for GitLab-hosted
+                                    UNUY projects
+                                </li>
+                                <li>
+                                    AI chat powered by Gemini with
+                                    retrieval-augmented generation
+                                </li>
+                                <li>
+                                    Role-based access control using UNUY's RBAC
+                                    service
+                                </li>
+                                <li>
+                                    Active development to improve documentation
+                                    workflows and team knowledge sharing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>UNUY Staff API</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Jan 2026</p>
+                        <p>
+                            <strong>Tech Stack:</strong> Go, Go Fiber, MongoDB,
+                            RESTful API
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Internal Data
+                            Service, API Access Management
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Developed a RESTful
+                            staff data management API to centralize staff
+                            information access across UNUY. The service acts as
+                            a single source of truth for internal staff data,
+                            standardizing data usage across university systems
+                            and reducing inconsistencies in future integrations.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>
+                                    Centralized staff data access for internal
+                                    systems
+                                </li>
+                                <li>
+                                    API access management and request review
+                                    flow
+                                </li>
+                                <li>
+                                    Governance controls for non-IT users and
+                                    external internal systems
+                                </li>
+                                <li>
+                                    Secure, maintainable backend service for
+                                    staff information delivery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>UNUY Budgeting</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Nov 2025</p>
+                        <p>
+                            <strong>Tech Stack:</strong> TypeScript, MongoDB,
+                            RESTful API
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Financial Workflow
+                            System, RBAC-based Access Control
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Developed a RESTful
+                            API for UNUY's internal budgeting system. The system
+                            supports complex university budgeting workflows,
+                            including budget submissions, review processes,
+                            approval flows, fund disbursement, and
+                            accountability reporting.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>
+                                    Budget submission, review, approval, and
+                                    disbursement workflows
+                                </li>
+                                <li>
+                                    Accountability reporting for financial
+                                    requests
+                                </li>
+                                <li>
+                                    Configurable custom roles managed by
+                                    administrators
+                                </li>
+                                <li>
+                                    Better transparency and monitoring for
+                                    finance team operations
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>UNUY Makan Siang Project</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Jun 2025</p>
+                        <p>
+                            <strong>Tech Stack:</strong> TypeScript, MongoDB,
+                            Socket.io, RESTful API, WebSocket
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Real-time Coupon
+                            System, Multi-tenant Backend
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Developed RESTful API
+                            and WebSocket backend services for UNUY's staff
+                            lunch coupon system. The system enables real-time
+                            coupon tracking, automatically synchronizes quota
+                            updates to the application, and supports controlled
+                            coupon sessions for daily operations.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>
+                                    Real-time coupon and quota tracking with
+                                    Socket.io
+                                </li>
+                                <li>
+                                    Controlled daily coupon sessions for staff
+                                    lunch operations
+                                </li>
+                                <li>
+                                    Multi-tenant support for canteen merchants
+                                </li>
+                                <li>
+                                    On-demand reimbursement workflow for coupon
+                                    redemption accountability
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>
+                        PIC Service on Oltime
                     </h3>
                     <div class="project-details">
                         <p><strong>Timeline:</strong> Mar 2025</p>
@@ -218,7 +491,10 @@
                             Implemented efficient database queries with
                             pagination and search capabilities while following
                             domain-driven design principles with clean
-                            separation of concerns.
+                            separation of concerns. The system provides
+                            supervisors with comprehensive tools to coordinate
+                            workforce across multiple companies and locations
+                            through a structured, maintainable API.
                         </p>
                         <div class="project-features">
                             <h4>Key Features:</h4>
@@ -355,7 +631,9 @@
                             YOLO v8 model. Utilized datasets from the Indonesian
                             Ministry of Public Works and Housing (PUPR) and the
                             RoadDamageDetector repository to enhance model
-                            accuracy.
+                            accuracy. This project was submitted to the AI-based
+                            Road Damage Detection Competition (Sayembara RDD)
+                            organized by Kementerian PUPR.
                         </p>
                         <div class="project-features">
                             <h4>Key Features:</h4>
@@ -459,19 +737,22 @@
                     <div class="project-details">
                         <p><strong>Timeline:</strong> Aug 2024</p>
                         <p>
-                            <strong>Tech Stack:</strong> Ruby on Rails, Redis,
-                            PostgreSQL, Sidekiq
+                            <strong>Tech Stack:</strong> Golang, PostgreSQL,
+                            Queue-based processing, RESTful API
                         </p>
                         <p>
-                            <strong>Architecture:</strong> Service-Oriented
-                            Architecture
+                            <strong>Architecture:</strong> Queue-based Backend
+                            Service
                         </p>
                         <p>
                             <strong>Description:</strong> A backend service
                             developed for Qiscus to efficiently distribute
                             customers to agents while ensuring load balancing.
                             Each agent has a configurable limit, adjustable
-                            through environment variables.
+                            through environment variables. The service uses a
+                            queue-based assignment system, with PostgreSQL used
+                            to track queue statuses and collect statistical
+                            data for transparency and performance monitoring.
                         </p>
                         <div class="project-features">
                             <h4>Key Features:</h4>
@@ -482,14 +763,17 @@
                                 </li>
                                 <li>Real-time load balancing</li>
                                 <li>Configurable agent workload limits</li>
-                                <li>Performance monitoring dashboard</li>
+                                <li>
+                                    Queue status tracking and statistical data
+                                    collection
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Automation Question Generator</h3>
+                    <h3>Automation Question Generator: Manage the Cloud of AQG</h3>
                     <div class="project-details">
                         <p><strong>Timeline:</strong> Dec 2023</p>
                         <p>
@@ -506,7 +790,10 @@
                             Automatic Question Generator (AQG) model. This
                             service is implemented using Python and the Flask
                             framework, and it is deployed using Docker and
-                            Kubernetes on Google Cloud Platform (GCP).
+                            Kubernetes on Google Cloud Platform (GCP). The
+                            service processes text inputs and generates
+                            relevant questions automatically, leveraging
+                            natural language processing techniques.
                         </p>
                         <div class="project-features">
                             <h4>Key Features:</h4>
@@ -566,6 +853,46 @@
                 </div>
 
                 <div class="project-card">
+                    <h3>Automation Question Generator: ML Engineer</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Aug 2021</p>
+                        <p>
+                            <strong>Tech Stack:</strong> Python, NLP,
+                            transformer models, sequence-to-sequence models
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Machine Learning,
+                            NLP Pipeline
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Worked on an NLP
+                            system that automatically generates contextually
+                            relevant questions from Indonesian text inputs. The
+                            project was designed to help educators, trainers,
+                            and content creators reduce manual question
+                            preparation time by leveraging machine learning
+                            techniques to analyze text and formulate questions
+                            accurately and efficiently.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Context-aware question generation</li>
+                                <li>Indonesian language processing</li>
+                                <li>
+                                    Model comparison and evaluation for
+                                    education use cases
+                                </li>
+                                <li>
+                                    Research output that supported later AQG
+                                    publications
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <h3>Nge-Lag: Attack with your past</h3>
                     <div class="project-details">
                         <p><strong>Timeline:</strong> Apr 2021</p>
@@ -599,21 +926,94 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <h3>Kreweng Race: Racing Game</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Feb 2021</p>
+                        <p>
+                            <strong>Tech Stack:</strong> Unity, C#, game audio,
+                            gameplay design
+                        </p>
+                        <p>
+                            <strong>Architecture:</strong> Racing Game,
+                            Interactive Gameplay
+                        </p>
+                        <p>
+                            <strong>Description:</strong> Created a racing game
+                            with a unique and engaging racing experience.
+                            Envisioned themes and mechanics that set it apart
+                            from other racing games, designed core gameplay
+                            elements including track layouts, racing dynamics,
+                            and in-game challenges, and integrated audio
+                            elements including sound effects and background
+                            music.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Custom racing theme and mechanics</li>
+                                <li>Designed track layouts and race dynamics</li>
+                                <li>Integrated sound effects and music</li>
+                                <li>Focused on accessible, engaging gameplay</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Student Research Information Management System</h3>
+                    <div class="project-details">
+                        <p><strong>Timeline:</strong> Jun 2020</p>
+                        <p>
+                            <strong>Tech Stack:</strong> Laravel, MySQL,
+                            JavaScript, Bootstrap
+                        </p>
+                        <p><strong>Architecture:</strong> MVC Web Application</p>
+                        <p>
+                            <strong>Description:</strong> Redesigned and updated
+                            the frontend of a student research information
+                            system to improve usability, accessibility, and
+                            overall user experience for students and faculty.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>
+                                    Improved interface structure and navigation
+                                </li>
+                                <li>More intuitive research data access</li>
+                                <li>
+                                    Support for faculty and student workflows
+                                </li>
+                                <li>
+                                    Foundation for later PKM Center system
+                                    improvements
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="navigation-buttons">
                 <a href="index.html" class="button">Home</a>
                 <a href="about.html" class="button">About Me</a>
+                <a href="assets/docs/cv-dhista%20ardiansyah.pdf" class="button"
+                    >Download CV</a
+                >
             </div>
-        </div>
+        </main>
 
         <footer>
             <p>
-                Best viewed with Microsoft Internet Explorer 6.0 or higher at
-                800x600 resolution
+                Portfolio archive, selected work, and professional notes.
             </p>
-            <p>© 2025 Dhista Dwi Nur Ardiansyah. All rights reserved.</p>
-            <p>Last updated: April 2025</p>
+            <p>
+                © <span data-current-year>2026</span> Dhista Dwi Nur
+                Ardiansyah. All rights reserved.
+            </p>
+            <p>Last updated: May 2026</p>
         </footer>
     </body>
 </html>
